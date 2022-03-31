@@ -1,4 +1,4 @@
-package com.musicmanagemenyt.entity;
+package com.musicmanagement.entity;
 
 import java.util.Date;
 
@@ -10,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import com.mysql.cj.jdbc.Blob;
 
 @Entity
 @Table(name = "music")
@@ -25,7 +23,7 @@ public class Music {
 	@Column(name = "description")
 	private String description;
 	@Column(name = "file")
-	private Blob file;
+	private byte[] file;
 	@Column(name = "created_date")
 	private Date createdDate;
 	@Column(name = "modified_date")
@@ -59,11 +57,13 @@ public class Music {
 		this.description = description;
 	}
 
-	public Blob getFile() {
+	
+
+	public byte[] getFile() {
 		return file;
 	}
 
-	public void setFile(Blob file) {
+	public void setFile(byte[] file) {
 		this.file = file;
 	}
 

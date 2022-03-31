@@ -1,4 +1,4 @@
-package com.musicmanagemenyt.entity;
+package com.musicmanagement.entity;
 
 import java.util.Date;
 import java.util.List;
